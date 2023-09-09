@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Blog</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav" >
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Anasayfa</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/hakkimizda">Hakkımızda</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/iletisim">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/ozgecmis">Özgeçmiş</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/giris">Giriş Yap</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/kayit">Kayıt Ol</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="text-center">Giriş Yap</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email adres</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Adresinizi giriniz.">
+            <small id="emailHelp" class="form-text text-muted">
+                E-postanızı asla başkasıyla paylaşmayacağız.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Şifre</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifre giriniz.">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Beni hatırla.</label>
+        </div>
+
+        <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+    </form>
+</div>
+<br><br><br>
+<%- include('../client/layouts/footer') %>
