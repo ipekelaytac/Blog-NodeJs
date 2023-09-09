@@ -10,7 +10,7 @@ const   mongoose        = require("mongoose"),
 const indexRoutes = require("./routes/indexRoutes"),
     dashboardRoutes = require("./routes/dashboardRoutes");
 //App Config
-mongoose.connect('mongodb://127.0.0.1/test')
+mongoose.connect('mongodb://127.0.0.1/blogapp')
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
