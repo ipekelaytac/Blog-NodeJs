@@ -10,7 +10,9 @@ const   mongoose        = require("mongoose"),
 const indexRoutes = require("./routes/indexRoutes"),
     dashboardRoutes = require("./routes/dashboardRoutes");
 //App Config
-mongoose.connect('mongodb://127.0.0.1/blogapp')
+mongoose.connect("mongodb://localhost/blogapp")
+//mongoose.connect('mongodb://127.0.0.1/blogapp')
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -25,7 +27,11 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
+//Share current user info within all routes
+app.use((req,res,next)=>{
+    res.locals.currentUser=req.user;
+    next();
+})
 
 //Routes Using
 app.use(indexRoutes);

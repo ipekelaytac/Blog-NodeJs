@@ -28,32 +28,39 @@
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/blog">Blog</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/iletisim">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/ozgecmis">Özgeçmiş</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/giris">Giriş Yap</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/kayit">Kayıt Ol</a></li>
+                <% if(!currentUser){ %>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/giris">Giriş Yap</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/kayit">Kayıt Ol</a></li>
+                <% } %>
+                <% if(currentUser){ %>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/yonetim"><%= currentUser.username%></a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/cikis">Çıkış Yap</a></li>
+                <% } %>
+
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="container mt-5">
-    <h1 class="text-center">Giriş Yap</h1>
-    <form>
+    <h1 class="text-center">Kayıt Ol</h1>
+    <form method="post" action="/kayit">
         <div class="form-group">
             <label for="exampleInputEmail1">Email adres</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Adresinizi giriniz.">
+            <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="usernameHelp" placeholder="Kullanıcı adı giriniz.">
             <small id="emailHelp" class="form-text text-muted">
                 E-postanızı asla başkasıyla paylaşmayacağız.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Şifre</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifre giriniz.">
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Şifre giriniz.">
         </div>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Beni hatırla.</label>
         </div>
 
-        <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+        <button type="submit" class="mt-3 btn btn-primary">Kayıt Ol</button>
     </form>
 </div>
 <br><br><br>
