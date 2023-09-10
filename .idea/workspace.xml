@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df8fcc2f-7f34-47a5-9999-66cd869af166" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/blogRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/dashboard/blog/showBlog.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/blogModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/blogModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/dashboard/blog/editBlog.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/blogRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/blogRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/dashboardRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dashboardRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/indexRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/indexRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/client/blog.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client/blog.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/client/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/client/layouts/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client/layouts/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/client/layouts/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client/layouts/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/client/resume.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard/blog/newBlog.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/dashboard/blog/showBlog.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard/blog/showBlogs.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/dashboard/dashboard.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/dashboard/dashboard.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +74,7 @@
       <workItem from="1694223804717" duration="2398000" />
       <workItem from="1694257476797" duration="571000" />
       <workItem from="1694348383259" duration="4692000" />
-      <workItem from="1694371304906" duration="9218000" />
+      <workItem from="1694371304906" duration="12609000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,67 @@
+<%- include('../../client/layouts/header') %>
+
+<!-- Page Header-->
+<header class="masthead"
+        style="background-image: url('https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_1280.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <!-- Post preview-->
+        <% foundBlogs.forEach((blog)=>{ %>
+            <div class="col-lg-3  mx-auto"><img class="img-thumbnail" src="<%= blog.image %>"></div>
+            <div class="col-lg-6 mx-auto">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title"><%= blog.title %></h2>
+                        <h3 class="post-subtitle"><%= blog.SubTitle %></h3>
+                    </a>
+                    <p class="post-meta">
+                        Posted by
+                        <%= blog.date %>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-1 mx-auto">
+                <a class="btn btn-outline-success" href="duzenle/<%= blog._id %>">Düzenle</a>
+
+            </div>
+            <div class="col-lg-1 mx-auto">
+                <form id="deleteForm" action="/silBlog/<%= blog._id %>" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-outline-danger">Sil</button>
+                </form>            </div>
+    </div>
+    <!-- Divider-->
+    <hr class="my-4"/>
+    <% }); %>
+
+</div>
+</div>
+<script>
+    $("#deleteForm").submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "DELETE",
+            url: $(this).attr("action"),
+            success: function (deletedBlog) {
+                console.log("========= DELETED BLOG =========");
+                console.log(deletedBlog);
+            },
+            error: function (error) {
+                console.log("Hata:", error);
+            }
+        });
+    });
+
+</script>
+<%- include('../../client/layouts/footer') %>

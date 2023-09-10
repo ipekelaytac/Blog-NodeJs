@@ -28,8 +28,12 @@
 </div>
 <script>
     function catchID(clickedId){
-        if(clickedId == 4){
-            window.location.href='yonetim/blog-ekle';
+        if(clickedId == 1){
+            window.location.href='blog-ekle';
+            return false;
+        }
+        if(clickedId == 2){
+            window.location.href='bloglar';
             return false;
         }
     }

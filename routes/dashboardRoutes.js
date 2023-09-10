@@ -6,27 +6,12 @@ const Console = require("console");
 
 let dashboardActions = [
     {
-      actionId:1,
-      actionName:"changeHomeImage",
-      displayName:"Change Home Image"
-    },
-    {
-        actionId:2,
-        actionName:"changeAboutImage",
-        displayName:"Change About Image"
-    },
-    {
-        actionId:3,
-        actionName:"changeAboutText",
-        displayName:"Change About Text"
-    },
-    {
-        actionId:4,
+        actionId:1,
         actionName:"addNewBlog",
         displayName:"Add New Blog"
     },
     {
-        actionId:5,
+        actionId:2,
         actionName:"listAllBlog",
         displayName:"List All Blog"
     },
