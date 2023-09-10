@@ -32,7 +32,7 @@ let dashboardActions = [
     },
 ]
 
-router.get("/yonetim", (req,res)=>{
+router.get("/yonetim",isLoggedIn, (req,res)=>{
     res.render('dashboard/dashboard',{dashboardActions:dashboardActions})
 })
 router.get("/giris", (req,res)=>{
@@ -46,10 +46,10 @@ router.post("/giris", passport.authenticate("local",{
     }
 )
 
-router.get("/kayit", (req,res)=>{
+router.get("/kayit", isLoggedIn,(req,res)=>{
     res.render('dashboard/signup')
 })
-router.post("/kayit",(req,res)=>{
+router.post("/kayit",isLoggedIn,(req,res)=>{
  let newUser = new User({username:req.body.username});
  User.register(newUser, req.body.password, (err, user)=>{
      if(err){
@@ -69,4 +69,10 @@ router.get("/cikis", (req,res)=>{
         res.redirect("/giris");
     });
 })
+function isLoggedIn(req,res,next){
+    if (req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("giris");
+}
 module.exports = router;

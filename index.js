@@ -9,6 +9,7 @@ const   mongoose        = require("mongoose"),
 //Routes
 const indexRoutes = require("./routes/indexRoutes"),
     dashboardRoutes = require("./routes/dashboardRoutes");
+    blogRoutes = require("./routes/blogRoutes");
 //App Config
 mongoose.connect("mongodb://localhost/blogapp")
 //mongoose.connect('mongodb://127.0.0.1/blogapp')
@@ -36,6 +37,7 @@ app.use((req,res,next)=>{
 //Routes Using
 app.use(indexRoutes);
 app.use(dashboardRoutes);
+app.use(blogRoutes);
 
 const server = app.listen(3000,(err)=>{
     if(err){

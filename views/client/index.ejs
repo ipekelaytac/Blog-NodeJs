@@ -18,18 +18,16 @@
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
             <!-- Post preview-->
-            <% data.forEach((d)=>{ %>
-                <div class="col-lg-3  mx-auto"><img class="img-thumbnail" src="<%= d.image %>"></div>
+            <% foundBlogs.forEach((blog)=>{ %>
+                <div class="col-lg-3  mx-auto"><img class="img-thumbnail" src="<%= blog.image %>"></div>
                 <div class="col-lg-9 mx-auto">
                     <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title"><%= d.blogTitle %></h2>
-                            <h3 class="post-subtitle"><%= d.blogSubTitle %></h3>
+                        <a href="bloglar/<%= blog._id %>">
+                            <h2 class="post-title"><%= blog.title %></h2>
+                            <h3 class="post-subtitle"><%= blog.subTitle %></h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 24, 2023
+                            <%= blog.date %>
                         </p>
                     </div>
                 </div>

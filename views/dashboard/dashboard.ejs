@@ -28,7 +28,10 @@
 </div>
 <script>
     function catchID(clickedId){
-alert(clickedId + "butona tıklandıs")
+        if(clickedId == 4){
+            window.location.href='yonetim/blog-ekle';
+            return false;
+        }
     }
 </script>
 <%- include('../client/layouts/footer') %>
